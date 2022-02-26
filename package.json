@@ -1,0 +1,22 @@
+{
+  "name": "@sea_flanker/body-validator",
+  "version": "0.0.1",
+  "description": "Express body validator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Simeon Mladenov",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.16.11",
+    "@types/moment": "^2.13.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "moment": "^2.29.1",
+    "validator": "^13.7.0"
+  }
+}

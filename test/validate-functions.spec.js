@@ -1,7 +1,6 @@
-import { success } from '../src/constants.js';
-import { validateString } from '../src/stringCheck.js';
-import common from '../src/commonCheck.js'
-
+const { success } = require('../src/constants')
+const { validateString } = require('../src/stringCheck')
+const common = require('../src/commonCheck')
 
 describe('String validator', () => {
   test('Validate type', () => {

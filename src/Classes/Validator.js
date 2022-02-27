@@ -1,4 +1,4 @@
-import { success, REQUEST_STATUS } from '../constants.js'
+const { success, REQUEST_STATUS } = require('../constants')
 
 class Validator {
   /**
@@ -91,5 +91,4 @@ class Validator {
   }
 }
 
-
-export default Validator
+module.exports.Validator = Validator

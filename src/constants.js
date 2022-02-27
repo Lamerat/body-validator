@@ -1,3 +1,3 @@
-export const success = 'success';
+exports.success = 'success';
 
-export const REQUEST_STATUS = 422
+exports.REQUEST_STATUS = 422

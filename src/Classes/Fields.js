@@ -1,5 +1,5 @@
-import common from '../commonCheck.js'
-import { validateString, stringOptions } from '../stringCheck.js'
+const common = require('../commonCheck')
+const { validateString, stringOptions } = require('../stringCheck')
 
 const numOptions = common.numOptions
 
@@ -56,4 +56,4 @@ class Fields {
   }
 }
 
-export default Fields
+exports.Fields = Fields

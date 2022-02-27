@@ -1,7 +1,7 @@
-import validator from 'validator'
-import moment from 'moment'
-import { success } from './constants.js'
-import { validateString } from './stringCheck.js'
+const validator = require('validator')
+const moment = require('moment')
+const { success } = require('./constants')
+const { validateString } = require ('./stringCheck')
 
 const numOptions = { min: 0, max: 0 }
 
@@ -92,4 +92,5 @@ const isURL = (str) => {
   return success
 }
 
-export default { isMongo, isDate, isNumber, isBoolean, isEmail, isURL, numOptions }
+
+module.exports = { isMongo, isDate, isNumber, isBoolean, isEmail, isURL, numOptions }

@@ -1,5 +1,6 @@
-import Fields from '../src/Classes/Fields.js'
-import Validator from '../src/Classes/Validator.js'
+const { Fields } = require('../src/Classes/Fields')
+const { Validator } = require('../src/Classes/Validator')
+
 
 
 const fields = new Fields

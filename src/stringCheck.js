@@ -1,10 +1,10 @@
-import validator from 'validator';
-import { success } from './constants.js'
+const validator = require('validator')
+const { success } = require('./constants')
 
 const includeTypes = 'lettersOnly' || 'numbersOnly' || 'lettersAndNumbers'
 const locales = [ 'bg-BG', 'en-US' ]
 
-export const stringOptions = {
+exports.stringOptions = {
   minSymbols: 1,
   maxSymbols: 10,
   canBeEmpty: false,
@@ -22,7 +22,7 @@ export const stringOptions = {
  * @param {stringOptions} options Checking options
  * @returns success or error message
  */
-export const validateString = (str, options) => {
+exports.validateString = (str, options) => {
   if (typeof str === 'undefined') return `Missing value!`
   if (typeof str !== 'string') return `'${str}' is not a 'string' type!`
   if (options?.canBeEmpty === false && !str.trim().length) return `can't be empty!`

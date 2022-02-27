@@ -1,6 +1,11 @@
 const { success, REQUEST_STATUS } = require('../constants')
 
 class Validator {
+  constructor() {
+    this.validateMiddleware = this.validateMiddleware.bind(this)
+    this.updateValidateMiddleware = this.updateValidateMiddleware.bind(this)
+  }
+
   /**
    * @param { String } name field name in req.body
    * @param { Fields } field 

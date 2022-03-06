@@ -53,6 +53,11 @@ describe('String validator', () => {
     expect(validateString('Ignore  double  spaces', { maxWords: 3 })).toBe(success)
     expect(validateString('Ignore  double  spaces', { maxWords: 2 })).not.toBe(success)
   })
+
+  test('Validate enum', () => {
+    expect(validateString('one', { enum: [ 'one', 'two', 'three'] })).toBe(success)
+    expect(validateString('five', { enum: [ 'one', 'two', 'three'] })).not.toBe(success)
+  })
 });
 
 

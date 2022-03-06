@@ -14,7 +14,10 @@ exports.stringOptions = {
   blackList: [],
   /**@type {includeTypes} */
   include: '',
+  /**@type {Array<String>} */
+  enum: [],
 }
+
 
 /**
  * Check string for different requirements
@@ -72,6 +75,8 @@ exports.validateString = (str, options) => {
   if (options?.blackList && options.blackList.map(x => str.includes(x)).some(el => el === true)) errors.push(`can't include symbols [ ${options.blackList} ]!`)
 
   if (options?.maxWords && str.split(' ').filter(x => x !== '').length > options.maxWords) errors.push(`must be max ${options.maxWords} words!`)
+
+  if (options?.enum && Array.isArray(options.enum) && !options.enum.includes(str)) errors.push(`is invalid, must be ${options.enum.join(' or ')}!`)
 
   if (errors.length) return errors.join(' | ')
   return success

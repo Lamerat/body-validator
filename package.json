@@ -1,6 +1,6 @@
 {
   "name": "@sea_flanker/body-validator",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Express body validator",
   "main": "index.js",
   "repository": "git://github.com/Lamerat/body-validator.git",
